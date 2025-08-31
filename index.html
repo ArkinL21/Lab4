@@ -11,44 +11,54 @@
     <h1>Welcome to NUST Profile</h1>
    
     <form id="regForm" novalidate>
-        <label for="firstName">First Name <span aria-hidden="true">*</span></label>
+
+        <div class="row-form">
+        <label for="firstName">First Name: <span aria-hidden="true">*</span></label>
         <input type="text" id="firstName" name="firstName" required/>
         <small class="error" id="err-first"></small><br>
-
-
-        <label for="lastName">Last Name <span aria-hidden="true">*</span></label>
+    </div>
+        
+    <div class="row-form">
+        <label for="lastName">Last Name: <span aria-hidden="true">*</span></label>
         <input type="text" id="lastName" name="lastName" required/>
         <small class="error" id="err-last"></small><br>
+    </div>
 
-
-        <label for="email">Email <span aria-hidden="true">*</span></label>
+    <div class="row-form">
+        <label for="email">Email: <span aria-hidden="true">*</span></label>
         <input type="email" id="email" name="email" required/>
         <small class="error" id="err-email"></small><br>
+    </div>    
 
-        
+    <div class="row-form">
         <label for="prg">Programme: </label>
         <textarea id="prg" name="prg"></textarea>
-            
+    </div>
+        
+    <div class="row-form">
         <fieldset>
-        <legend>Year of Study <span aria-hidden="true">*</span></legend>
+        <legend>Year of Study: <span aria-hidden="true">*</span></legend>
         <label><input type="radio" name="year" value="1" required/> 1</label>
         <label><input type="radio" name="year" value="2"/> 2</label>
         <label><input type="radio" name="year" value="3"/> 3</label>
         </fieldset>
+    </div>    
 
+    <div class="row-form">
         <label for="interests">Interests: </label>
         <textarea id="interests" name="interests"></textarea><br>
+    </div>    
 
-        <label for="photo">Photo URL </label>
+    <div class="row-form">
+        <label for="photo">Photo URL: </label>
         <input type="url" id="photo" name="photo" required/>
-
-
+    </div>
 
         <div aria-live="polite" class="sr" id="live"></div>
         <button type="submit">Add Student</button>
         </form>
 
-        <h2>Student Summary</h2>
+        <h2>Student Information</h2>
     <table id="table" border="5">
         <thead>
             <tr>
