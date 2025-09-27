@@ -8,11 +8,11 @@
 
 </head>
 <body>
-    <h1>Welcome to NUST Profile</h1>
+    <h1 class="page-titles">Welcome to NUST Profile</h1>
 
     <!-- Form that student have to fill in -->
    
-    <form id="regForm" novalidate>
+    <form id="regForm" class="form-stud" novalidate>
 
         <div class="row-form">
         <label for="firstName">First Name: <span aria-hidden="true">*</span></label>
@@ -63,11 +63,12 @@
 
         <!-- Information from the students will be shown here -->
 
-        <h2>Profile Cards</h2>
-          <div id="profileCardsContainer"></div>
+        <h2 class="card-title">Profile Cards</h2>
+          <div id="profileCardsContainer" class="container-card"></div>
 
-        <h2>Student Information</h2>
-    <table id="summaryTable" border="5">
+        <h2 class="table-title">Student Information</h2>
+           
+    <table id="summaryTable" class="table-info" border="5">
         <thead>
             <tr>
                 <th>First Name</th>
