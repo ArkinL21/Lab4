@@ -1,3 +1,5 @@
+
+/* this is fir the general style */
 body {
     font-family: Arial, sans-serif;
     padding: 20px;
@@ -8,6 +10,8 @@ body {
     
 }
 
+
+/* Styling for the student form */
 form{
     background-color: #ffffff;
     border-radius: 8px;
@@ -18,6 +22,11 @@ form{
 
 }
 
+button:focus {
+    outline: 2px solid #ffcc00; /* makes the button vissible for keyboard users */
+}
+
+/* Submit button style */
 button [type="submit"] {
     display: block;
     margin: 20px auto 0 auto;
@@ -31,11 +40,12 @@ button [type="submit"] {
     transition: background-color 0.3s ease;
 }
 
-
+/* Makes the submit button turn red when hovered on */
 button[type="submit"]:hover {
     background-color: #D9272D; 
 }
 
+/* Styling for the table that showwith student information */
 table {
     border-collapse: collapse;
     width: 80%;
@@ -69,3 +79,102 @@ table th, table td {
     text-align: left;
     color: #1D2758; 
 }
+
+h1 {
+    color: #003366; 
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #003366;
+    margin-top: 40px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+#live {
+    font-weight: bold;
+    margin-top: 10px;
+    color: green;
+}
+#profileCardsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* for smaller screens but larger than mobile */
+@media (max-width: 768px) {
+    #profileCardsContainer {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+    }
+}
+
+/* for mobile screen */
+@media (max-width: 480px) {
+    #profileCardsContainer {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); 
+    }
+
+    .profile-card img {
+        width: 60px;
+        height: 60px;
+    }
+s
+    .profile-card {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}
+
+.profile-card img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+    width: 80px; 
+    height: 80px;
+    object-fit: cover;
+}
+
+
+.profile-card h3 {
+    margin: 10px 0 5px 0;
+    font-size: 1.1em;
+}
+
+.profile-card p {
+    margin: 3px 0;
+    font-size: 0.9em;
+}
+
+.profile-card .remove-btn {
+    margin-top: 10px;
+    background-color: #cc0000;
+    color: white;
+    width: 100%;
+}
+
+.profile-card .remove-btn:hover {
+    background-color: #990000;
+}
+
+
