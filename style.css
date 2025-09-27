@@ -12,7 +12,15 @@ body {
 
 
 /* Styling for the student form */
-form{
+
+
+.page-titles{
+    color: #003366;
+    margin-bottom: 15px;
+    animation: fadeIn 3s ease-in;
+}
+   /* Form styling */
+/* form{
     background-color: #ffffff;
     border-radius: 8px;
     padding: 10px;
@@ -20,80 +28,30 @@ form{
     margin: 0 auto ;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 
-}
-
-button:focus {
-    outline: 2px solid #ffcc00; /* makes the button vissible for keyboard users */
-}
-
-/* Submit button style */
-button [type="submit"] {
-    display: block;
-    margin: 20px auto 0 auto;
-    padding: 80px 70px;
-    font-size: 20px;
-    border: none;
-    background-color: #F6B11F; 
-    color: white;
+} */
+.form-stud{
+    background-color: #ffffff;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-/* Makes the submit button turn red when hovered on */
-button[type="submit"]:hover {
-    background-color: #D9272D; 
-}
-
-/* Styling for the table that showwith student information */
-table {
-    border-collapse: collapse;
-    width: 80%;
-    margin-top: 20px;
+    padding: 20px;
+    max-width: 600px;
     margin: 0 auto;
-    background-color: #FFFFFF; 
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    animation: fadeIn 3s ease-in;
+
 }
 
-.row-form {
+.row-form{
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
-}
-
-.row-form label {
-    width: 180px; 
-    margin-right: 10px;
-    font-weight: bold;
-    color: #1D2758; 
-}
-
-table th {
-    background-color: #F6B11F; 
-    color: white;
-}
-
-table th, table td {
-    border: 1px solid #D9272D;
-    padding: 8px;
+    margin-bottom: 10px;
     text-align: left;
-    color: #1D2758; 
 }
 
-h1 {
-    color: #003366; 
-    margin-bottom: 20px;
-}
-
-h2 {
-    color: #003366;
-    margin-top: 40px;
-}
-
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
+.row-form label{
+    width: 180px;
+    margin-right: 15px;
+    font-weight: bolder;
+    color: #1d2758;
 }
 
 input[type="text"],
@@ -101,61 +59,123 @@ input[type="email"],
 input[type="url"],
 textarea {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 15px;
     box-sizing: border-box;
 }
-.error {
-    color: red;
-    font-size: 0.9em;
+
+input:focus,
+textarea:focus {
+    border-color: #f6b11f;
+    outline: none;
+    box-shadow: 0 0 5px rgba(246, 177, 31, 0.5);
 }
+
+button[type="submit"] {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    background-color: #F6B11F;
+    color: #003366;
+    border-radius: 5px;
+    cursor: all-scroll;
+    transition: background-color 0.3s ease;
+}
+button[type="submit"]:hover {
+    background-color: #D9272D;
+    color: white;
+}
+button:focus {
+    outline: 5px solid #ffcc00;
+}
+
 #live {
     font-weight: bold;
     margin-top: 10px;
     color: green;
 }
-#profileCardsContainer {
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+
+/* Table styling */
+
+.table-title {
+    color: #003366;
+    margin-top: 30px;
+    animation: fadeIn 3s ease-in;
+}
+
+.table-info {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 20px auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    animation: fadeIn 3s ease-in;
+}
+
+.table-info th {
+    background-color: #F6B11F;
+    color: white;
+    padding: 15px;
+    
+}
+
+.table-info th, .table-info td {
+    border: 1px solid #D9272D;
+    padding: 8px;
+    text-align: right;
+    color: #1d2758;
+}
+
+.table-info tbody tr:hover {
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Styling for cards*/
+.card-title {
+    color: #003366;
+    margin-top: 40px;
+    animation: fadeIn 2s ease-in;
+}
+
+.container-card {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 20px;
+    gap: 15px;
     justify-content: center;
     margin-top: 20px;
 }
 
-/* for smaller screens but larger than mobile */
-@media (max-width: 768px) {
-    #profileCardsContainer {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
-    }
+.profile-card {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    animation: fadeIn 0.2s ease-in;
+    transition: transform 0.2s ease;
 }
 
-/* for mobile screen */
-@media (max-width: 480px) {
-    #profileCardsContainer {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); 
-    }
-
-    .profile-card img {
-        width: 60px;
-        height: 60px;
-    }
-s
-    .profile-card {
-        padding: 10px;
-        font-size: 0.9em;
-    }
+.profile-card:hover {
+    transform: scale(1.02);
 }
 
 .profile-card img {
     border-radius: 50%;
-    margin-bottom: 10px;
-    width: 80px; 
+    margin-bottom: 15px;
+    width: 80px;
     height: 80px;
     object-fit: cover;
-    
 }
-
 
 .profile-card h3 {
     margin: 10px 0 5px 0;
@@ -172,10 +192,41 @@ s
     background-color: #cc0000;
     color: white;
     width: 100%;
+    border:dotted yellow;
+    padding: 8px;
+    border-radius: 5px;
+    cursor:grab;
 }
 
 .profile-card .remove-btn:hover {
     background-color: #990000;
 }
 
+/* Styling for screen sizes  */
+@media (max-width: 768px) {
+    .container-card {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
 
+@media (max-width: 480px) {
+    .container-card {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .profile-card img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .profile-card {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
